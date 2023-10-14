@@ -1,27 +1,48 @@
-import { Container, Button } from "@mui/material";
+import { Container, Button, ButtonGroup, Box } from "@mui/material";
 import Typography from "@mui/joy/Typography";
 import TextField from "@mui/material/TextField";
 
-import React from "react";
-
 const index = () => {
+  const copyrightYear = () => {
+    return new Date().getFullYear();
+  };
+
   return (
-    <Container>
+    <Container
+      sx={{ display: "grid", marginBottom: 200, gap: 4, marginTop: 4 }}
+    >
       <Typography level="h2" sx={{ textAlign: "center" }}>
         Sign up to my newsletter for exclusive updates
       </Typography>
-      <div>
+      <Box
+        sx={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 8 }}
+      >
         <TextField id="outlined-basic" label="First Name" variant="outlined" />
         <TextField id="outlined-basic" label="Last Name" variant="outlined" />
         <TextField id="outlined-basic" label="Email" variant="outlined" />
-        <Button>Sign Up</Button>
-      </div>
-      <div>
+      </Box>
+      <Button>Sign Up</Button>
+      <Box>
         <Typography sx={{ textAlign: "center" }}>
           Sign up to my newsletter for exclusive updates
         </Typography>
-        
-      </div>
+      </Box>
+      <Box
+        sx={{
+          gap: 3,
+          display: "flex",
+          justifyContent: "center",
+          border: "none",
+        }}
+        aria-label="outlined primary button group"
+      >
+        <Button>Shipping</Button>
+        <Button>FAQs</Button>
+        <Button>Testimonials</Button>
+      </Box>
+      <Typography sx={{ textAlign: "center" }}>
+        Copyright © Dietrich {copyrightYear()}
+      </Typography>
     </Container>
   );
 };
