@@ -1,6 +1,7 @@
 import { Container, Button, ButtonGroup, Box } from "@mui/material";
 import Typography from "@mui/joy/Typography";
 import TextField from "@mui/material/TextField";
+import styles from "./styles.module.css";
 
 const index = () => {
   const copyrightYear = () => {
@@ -9,7 +10,13 @@ const index = () => {
 
   return (
     <Container
-      sx={{ display: "grid", marginBottom: 200, gap: 4, marginTop: 4 }}
+      sx={{
+        display: "grid",
+        marginBottom: 200,
+        gap: 4,
+        marginTop: 4,
+        backgroundColor: "#eeeff0",
+      }}
     >
       <Typography level="h2" sx={{ textAlign: "center" }}>
         Sign up to my newsletter for exclusive updates
