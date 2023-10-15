@@ -9,9 +9,16 @@ const index = () => {
 
   return (
     <Container
-      sx={{ display: "grid", marginBottom: 200, gap: 4, marginTop: 4 }}
+      sx={{
+        minWidth: "100%",
+        display: "grid",
+        margin: 0,
+        padding: 0,
+        gap: 4,
+        backgroundColor: "#eeeff0",
+      }}
     >
-      <Typography level="h2" sx={{ textAlign: "center" }}>
+      <Typography level="h2" sx={{ textAlign: "center", mt: 4 }}>
         Sign up to my newsletter for exclusive updates
       </Typography>
       <Box
