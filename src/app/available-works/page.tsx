@@ -1,8 +1,9 @@
-import { Container, Grid } from "@mui/material";
+import React from "react";
 import Image from "next/image";
 
+import { Container, Grid } from "@mui/material";
 import Typography from "@mui/joy/Typography";
-import React from "react";
+
 
 const AvailableWorks = () => {
   return (

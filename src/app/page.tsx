@@ -1,8 +1,6 @@
 // https://www.janehindmarchart.com/portfolio
 import Slideshow from "@/components/Slideshow";
-
 import { Container } from "@mui/material";
-
 import Typography from "@mui/joy/Typography";
 
 import styles from "./page.module.css";
