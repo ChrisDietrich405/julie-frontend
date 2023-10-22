@@ -27,7 +27,7 @@ const navLinks = [
   },
   {
     title: "Available Works",
-    route: "/available-works",
+    route: "/available-works2",
   },
   {
     title: "Book",
