@@ -2,9 +2,9 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
-const slideshow1 = "/images/home-banner-1.jpg";
-const slideshow2 = "/images/home-banner-2.jpg";
-const slideshow3 = "/images/chickpeas.jpg";
+const slideshow1 = "/images/art2.jpg";
+const slideshow2 = "/images/art3.jpg";
+const slideshow3 = "/images/art4.jpg";
 
 import styles from "./styles.module.css";
 

@@ -1,51 +1,96 @@
-import React from "react";
+"use client";
+import * as React from "react";
 import Image from "next/image";
-
-import { Container, Grid } from "@mui/material";
+import { styled } from "@mui/joy/styles";
+import Grid from "@mui/joy/Grid";
+import Sheet from "@mui/joy/Sheet";
 import Typography from "@mui/joy/Typography";
 
+import styles from "./styles.module.css";
 
-const AvailableWorks = () => {
+const Item = styled(Sheet)(({ theme }) => ({
+  backgroundColor:
+    theme.palette.mode === "dark" ? theme.palette.background.level1 : "#fff",
+  ...theme.typography["body-sm"],
+  padding: theme.spacing(1),
+  textAlign: "center",
+  borderRadius: 4,
+  color: theme.vars.palette.text.secondary,
+}));
+
+export default function RowAndColumnSpacing() {
   return (
-    <Container
-      sx={{
-        flexDirection: "column",
-        alignItems: "center",
-        display: "flex",
-        justifyContent: "center",
-      }}
-    >
-      <Typography sx={{ textAlign: "center", my: 3 }} level="h1">
-        Available Works
-      </Typography>
-      <Grid sx={{ margin: 0 }} container direction="row">
-        <Grid item xs={4} display="flex" justifyContent="center">
-          <Image
-            width={333}
-            height={333}
-            alt="slideshow"
-            src="/images/chickpeas.jpg"
-          />
+    <>
+      <h1>Available Works</h1>
+      <Grid
+        container
+        rowSpacing={1}
+        columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+        sx={{ width: "100%" }}
+      >
+        <Grid xs={6}>
+          <Grid xs={12}>
+            {" "}
+            <Item>
+              <Image
+                className={styles.image}
+                width={333}
+                height={200}
+                alt="slideshow"
+                src="/images/art1.jpg"
+              />
+              <Typography sx={{ marginBottom: 2 }} component="p">
+                Simply fill out the form and I'll be in touch soon.
+              </Typography>
+            </Item>
+          </Grid>
+          <Grid xs={12}>
+            <Item>
+              <Image
+                className={styles.image}
+                width={333}
+                height={333}
+                alt="slideshow"
+                src="/images/art2.jpg"
+              />
+              <Typography sx={{ marginBottom: 2 }} component="p">
+                Simply fill out the form and I'll be in touch soon.
+              </Typography>
+            </Item>
+          </Grid>
         </Grid>
-        <Grid item xs={4} display="flex" justifyContent="center">
-          <Image
-            width={333}
-            height={333}
-            alt="slideshow"
-            src="/images/chickpeas.jpg"
-          />
-        </Grid>
-        <Grid item xs={4} display="flex" justifyContent="center">
-          <Image
-            width={333}
-            height={333}
-            alt="slideshow"
-            src="/images/chickpeas.jpg"
-          />
+        <Grid xs={6}>
+          <Grid xs={12}>
+            <Item>
+              <Image
+                className={styles.image}
+                width={333}
+                height={333}
+                alt="slideshow"
+                src="/images/art3.jpg"
+              />
+              <Typography sx={{ marginBottom: 2 }} component="p">
+                Simply fill out the form and I'll be in touch soon.
+              </Typography>
+            </Item>
+          </Grid>
+          <Grid xs={12}>
+            <Item>
+              <Image
+                className={styles.image}
+                width={333}
+                height={333}
+                alt="slideshow"
+                src="/images/art4.jpg"
+              />
+              <Typography sx={{ marginBottom: 2 }} component="p">
+                Simply fill out the form and I'll be in touch soon.
+              </Typography>
+            </Item>
+          </Grid>
+            
         </Grid>
       </Grid>
-    </Container>
+    </>
   );
-};
-
-export default AvailableWorks;
+}

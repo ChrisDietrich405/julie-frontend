@@ -10,13 +10,13 @@ const index = () => {
 
   return (
     <Container
-      sx={{ display: "grid", marginBottom: 200, gap: 4, marginTop: 4 }}
+      sx={{ display: "Grid", marginBottom: 200, gap: 4, marginTop: 4 }}
     >
       <Typography level="h2" sx={{ textAlign: "center", mt: 4 }}>
         Sign up to my newsletter for exclusive updates
       </Typography>
       <Box
-        sx={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 8 }}
+        sx={{ display: "Grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 8 }}
       >
         <TextField id="outlined-basic" label="First Name" variant="outlined" />
         <TextField id="outlined-basic" label="Last Name" variant="outlined" />
