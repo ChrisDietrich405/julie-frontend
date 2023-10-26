@@ -25,12 +25,14 @@ const ContactForm = () => {
 
     try {
       const templateParams = {
-        email: emailRef?.current?.value,
-        message: messageRef?.current?.value,
-        to_name: "Emily",
-        firstName: firstNameRef?.current?.value,
-        lastName: lastNameRef?.current?.value,
+        email: emailRef.current?.value,
+        // message: messageRef.current?.value,
+        // to_name: "Emily",
+        // firstName: firstNameRef.current?.value,
+        // lastName: lastNameRef.current?.value,
       };
+
+      console.log(templateParams);
 
       await emailjs.send(
         process.env.NEXT_PUBLIC_SERVICE_ID as string,
@@ -44,8 +46,6 @@ const ContactForm = () => {
       alert(error);
     }
   };
-
- 
 
   return (
     <React.Fragment>
@@ -75,7 +75,7 @@ const ContactForm = () => {
           />
         </Stack>
         <TextField
-          ref={emailRef}
+          inputRef={emailRef}
           type="email"
           variant="outlined"
           color="secondary"
@@ -99,7 +99,7 @@ const ContactForm = () => {
           sx={{ mb: 4 }}
           id="outlined-multiline-static"
           multiline
-          rows={4} 
+          rows={4}
         />
 
         <Button variant="outlined" color="secondary" type="submit">
